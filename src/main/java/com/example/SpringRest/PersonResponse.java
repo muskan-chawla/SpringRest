@@ -7,6 +7,14 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 @Value
 public class PersonResponse {
+    
+        public int getAge() {
+        return age;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
 
     int age;
     String firstName;
