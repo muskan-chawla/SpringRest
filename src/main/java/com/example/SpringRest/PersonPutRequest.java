@@ -4,17 +4,15 @@ import lombok.Data;
 import org.bson.types.ObjectId;
 
 import javax.validation.constraints.Min;
+import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
-import java.util.ArrayList;
-//@Slf4j
 @Data
-public class PersonRequest {
-     ObjectId Id;
+public class PersonPutRequest {
     @Min(1)
     int age;
+    ObjectId id;
     @NotNull
     String name;
-
 
     public int getAge() {
         return age;
@@ -25,6 +23,17 @@ public class PersonRequest {
     }
 
 
+
+    public ObjectId getId() {
+        return id;
+    }
+
+    public void setId(ObjectId id) {
+        this.id = id;
+    }
+
+
+
     public String getName() {
         return name;
     }
@@ -32,8 +41,6 @@ public class PersonRequest {
     public void setName(String name) {
         this.name = name;
     }
-
-
 
 
 }

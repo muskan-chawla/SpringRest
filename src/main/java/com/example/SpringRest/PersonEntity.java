@@ -1,20 +1,26 @@
 package com.example.SpringRest;
 
 import lombok.Data;
+import lombok.Value;
 import org.bson.types.ObjectId;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 
-import javax.validation.constraints.Min;
-import javax.validation.constraints.NotNull;
-import java.util.ArrayList;
-//@Slf4j
+@Document("person")
 @Data
-public class PersonRequest {
-     ObjectId Id;
-    @Min(1)
+public class PersonEntity {
     int age;
-    @NotNull
     String name;
+    @Id
+    ObjectId id;
 
+    public ObjectId getId() {
+        return id;
+    }
+
+    public void setId(ObjectId id) {
+        this.id = id;
+    }
 
     public int getAge() {
         return age;
@@ -25,6 +31,7 @@ public class PersonRequest {
     }
 
 
+
     public String getName() {
         return name;
     }
@@ -32,9 +39,4 @@ public class PersonRequest {
     public void setName(String name) {
         this.name = name;
     }
-
-
-
-
 }
-
