@@ -7,43 +7,41 @@ import org.bson.types.ObjectId;
 
 @Slf4j
 
-public class PersonResponse {
+public  class PersonResponse {
     int age;
     String Name;
+    ObjectId id;
+
+    public int getAge() {
+        return age;
+    }
+
+    public String getName() {
+        return Name;
+    }
 
     public ObjectId getId() {
         return id;
     }
 
-    public void setId(ObjectId id) {
-        this.id = id;
-    }
-
-    ObjectId id;
-
-
-
-
-
     public void setAge(int age) {
         this.age = age;
     }
 
-
-    public void setName(String Name) {
-        this.Name = Name;
+    public void setName(String name) {
+        Name = name;
     }
 
-
-
-
-    public int getAge() {
-        return age;
+    public void setId(ObjectId id) {
+        this.id = id;
     }
-    public String getName() {
-        return Name;
-    }
-
-
-
 }
+
+
+
+
+
+
+
+
+
