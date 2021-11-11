@@ -23,7 +23,7 @@ dependencies {
 	implementation 'org.openapitools:jackson-databind-nullable:0.2.1'
 	implementation 'org.projectlombok:lombok:1.18.20'
 	implementation 'io.openliberty.features:com.ibm.websphere.appserver.jaxrsDefaultExceptionMapper-1.0:21.0.0.9'
-     implementation'org.junit:junit-bom:5.2.0'
+     implementation'org.junit.jupiter:junit-jupiter:5.6.2'
 
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 
